@@ -96,10 +96,10 @@ num_new_samples_per_iteration = 1  # Change this to your desired number of sampl
 total_samples = 100
 
 
+# Randomly initialize training data with 10 points
 train_x = torch.from_numpy(X.ravel()).to(dtype=torch.float64)
 train_y = torch.from_numpy(Yc.ravel()).to(dtype=torch.float64)
 
-# Randomly initialize training data with 10 points
 indices = torch.randperm(total_samples)[:num_initial_points]
 train_xSTP = train_x[indices]
 train_ySTP = train_y[indices]
